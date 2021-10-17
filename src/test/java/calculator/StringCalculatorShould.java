@@ -76,7 +76,12 @@ class StringCalculatorShould {
 		StringCalculator stringcalculator = new StringCalculator();
 		assertEquals(2, stringcalculator.add("2,1001"));
 	}
-	
+	@Test
+	public void validateAnyLengthDelimeter()
+	{
+		StringCalculator stringcalculator = new StringCalculator();
+		assertEquals(6, stringcalculator.add("//[***]\n1***2***3"));
+	}
 	
   
 }
