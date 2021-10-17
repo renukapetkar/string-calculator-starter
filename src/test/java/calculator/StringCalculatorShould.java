@@ -82,6 +82,12 @@ class StringCalculatorShould {
 		StringCalculator stringcalculator = new StringCalculator();
 		assertEquals(6, stringcalculator.add("//[***]\n1***2***3"));
 	}
+	@Test
+	public void multipleDelimeter()
+	{
+		StringCalculator stringcalculator = new StringCalculator();
+		assertEquals(6, stringcalculator.add("//[*][%]\n1*2%3"));
+	}
 	
   
 }
