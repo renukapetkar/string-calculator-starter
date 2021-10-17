@@ -62,6 +62,14 @@ class StringCalculatorShould {
 		}
 	}
 	
+	@Test
+	public void validateCallCount()
+	{
+		StringCalculator stringcalculator = new StringCalculator();
+		assertEquals(StringCalculator.getCallCount(), StringCalculator.count);
+	}
+
+	
 	
   
 }
