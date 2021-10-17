@@ -6,7 +6,15 @@ import java.util.regex.Pattern;
 
 class StringCalculator {
 	
+	static int count = 0;
+	
     public int add(String numbers) {
+    	
+    	synchronized(this)
+		{
+			count++;
+		}
+		
     	
 		if(numbers.isEmpty())
 			return 0;
@@ -93,6 +101,10 @@ class StringCalculator {
 		return nums.split(delimeter);
 	}
 	*/
+	public static int getCallCount()
+	{
+		return count;
+	}
 	
 	private static String[] splitMulCustomDelWithAnyLength(String str)
 	{
