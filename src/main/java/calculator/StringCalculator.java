@@ -31,22 +31,22 @@ class StringCalculator {
 			
 			for(int i =0; i<l; i++)
 			{
-			
-					Matcher mx = Pattern.compile("^(\\+|-)?\\d+$").matcher(nums[i]);
-					while(mx.find())
-					{	
-						q = mx.group();
-						e = Integer.parseInt(q);
+
+				Matcher mx = Pattern.compile("^(\\+|-)?\\d+$").matcher(nums[i]);
+				while(mx.find())
+				{	
+					q = mx.group();
+					e = Integer.parseInt(q);
+					
+					if(e<0)
+					{
+						negatives.add(e);
+					}
+					if(e>1000)
+						e=0;
 						
-						if(e<0)
-						{
-							negatives.add(e);
-						}
-						if(e>1000)
-							e=0;
-							
-						nos.add(e);
-						sum +=e;
+					nos.add(e);
+					sum +=e;
 					 }
 			}
 			
