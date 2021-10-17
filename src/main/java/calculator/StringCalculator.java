@@ -2,8 +2,13 @@ package calculator;
 
 class StringCalculator {
 
-    public int add(String input) {
-        return 0;
+    public int add(String numbers) {
+    	if(numbers.isEmpty())
+    	{
+			return 0;
+    	}
+		return 0;
+        
     }
 
 }
